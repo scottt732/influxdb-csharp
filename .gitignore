@@ -1,0 +1,6 @@
+InfluxDBClient.Tests/bin/
+InfluxDBClient.Tests/obj/
+InfluxDBClient/bin/
+InfluxDBClient/obj/
+_ReSharper.InfluxDBClient/
+packages/
