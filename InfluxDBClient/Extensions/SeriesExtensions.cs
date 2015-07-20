@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using InfluxDB.Response;
 
 namespace InfluxDB.Extensions
 {
-    public static class SeriesExtensions
+    internal static class SeriesExtensions
     {
         public static IReadOnlyDictionary<string, object> ToSimpleDictionary(this Response.Series series)
         {

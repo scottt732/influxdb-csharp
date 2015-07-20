@@ -2,7 +2,7 @@
 
 namespace InfluxDB.Extensions
 {
-    public static class TimeSpanExtensions
+    internal static class TimeSpanExtensions
     {
         public static long TotalNanoseconds(this TimeSpan self)
         {            

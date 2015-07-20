@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using InfluxDB.Response;
 
 namespace InfluxDB.Extensions
 {
-    public static class ResultSetExtensions
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    internal static class ResultSetExtensions
     {
         public static object[] ToSimpleList(this ResultSet resultSet)
         {

@@ -1,5 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace InfluxDB.Response
 {
+    [SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
     public class Result
     {
         public Series[] Series { get; set; }

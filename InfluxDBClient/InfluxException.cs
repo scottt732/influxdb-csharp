@@ -1,7 +1,11 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace InfluxDB
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
     public class InfluxException : Exception
     {
         public int StatusCode { get; private set; }

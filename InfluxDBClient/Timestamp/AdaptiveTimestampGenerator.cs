@@ -1,5 +1,6 @@
 using System;
 using InfluxDB.Enums;
+using InfluxDB.Timestamp.Source;
 
 namespace InfluxDB.Timestamp
 {

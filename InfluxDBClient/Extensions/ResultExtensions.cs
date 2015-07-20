@@ -4,11 +4,11 @@ using InfluxDB.Response;
 
 namespace InfluxDB.Extensions
 {
-    public static class ResultExtensions
+    internal static class ResultExtensions
     {
-        public static Response.Series GetSingleSeries(this Result result)
+        public static Series GetSingleSeries(this Result result)
         {
-            Response.Series firstSeries;
+            Series firstSeries;
 
             try
             {

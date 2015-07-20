@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace InfluxDB.Timestamp
+namespace InfluxDB.Timestamp.Source
 {
     public static class SystemTimePreciseTimestampSource
     {

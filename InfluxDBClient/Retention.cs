@@ -1,16 +1,13 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
+using InfluxDB.Enums;
 
 namespace InfluxDB
 {
-    public enum RetentionUnit
-    {
-        Hours,
-        Days,
-        Weeks,
-        Infinite
-    }
-
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
     public class Retention
     {
         public int Amount { get; set; }

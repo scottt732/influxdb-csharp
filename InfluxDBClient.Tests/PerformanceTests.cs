@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
-using NUnit.Framework;
 
 namespace InfluxDB.Tests
 {

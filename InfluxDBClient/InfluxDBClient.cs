@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
 using InfluxDB.Enums;
@@ -10,6 +11,7 @@ using InfluxDB.Timestamp;
 
 namespace InfluxDB
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class InfluxDBClient : IInfluxDbClient
     {
         public IRequestProcessor RequestProcessor { get; private set; }

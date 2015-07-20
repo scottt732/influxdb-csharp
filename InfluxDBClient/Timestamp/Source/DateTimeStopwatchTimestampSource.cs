@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace InfluxDB.Timestamp
+namespace InfluxDB.Timestamp.Source
 {
     public static class DateTimeStopwatchTimestampSource
     {

@@ -1,5 +1,9 @@
-﻿namespace InfluxDB
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace InfluxDB
 {
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
+    [SuppressMessage("ReSharper", "UnusedAutoPropertyAccessor.Global")]
     public class RetentionPolicy
     {
         internal RetentionPolicy(string name, Retention duration, int replication)

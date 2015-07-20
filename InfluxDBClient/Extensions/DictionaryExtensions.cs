@@ -5,7 +5,7 @@ using System.Text;
 
 namespace InfluxDB.Extensions
 {
-    public static class DictionaryExtensions
+    internal static class DictionaryExtensions
     {
         private static bool IsValidType(object value)
         {

@@ -73,6 +73,7 @@
     <Compile Include="Response\ResultSet.cs" />
     <Compile Include="Response\Series.cs" />
     <Compile Include="RetentionPolicy.cs" />
+    <Compile Include="Enums\RetentionUnit.cs" />
     <Compile Include="Timestamp\AdaptiveTimestampGenerator.cs" />
     <Compile Include="Timestamp\DateTimeStopwatchTimestampGenerator.cs" />
     <Compile Include="Timestamp\DateTimeTimestampGenerator.cs" />
@@ -88,7 +89,6 @@
     <Compile Include="InfluxKey.cs" />
     <Compile Include="Request\WriteMessage.cs" />
     <Compile Include="InfluxServerInfo.cs" />
-    <Compile Include="Series.cs" />
     <Compile Include="Enums\TimePrecision.cs" />
     <Compile Include="Extensions\TimeSpanExtensions.cs" />
     <Compile Include="Timestamp\SystemTimePreciseTimestampGenerator.cs" />

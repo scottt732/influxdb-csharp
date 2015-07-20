@@ -3,7 +3,7 @@ using System.Net.Http;
 
 namespace InfluxDB.Extensions
 {
-    public static class HttpResponseMessageExtensions
+    internal static class HttpResponseMessageExtensions
     {
         public static void ValidateHttpResponse(this HttpResponseMessage result, HttpStatusCode successStatusCode, bool treatOkAsFailure)
         {

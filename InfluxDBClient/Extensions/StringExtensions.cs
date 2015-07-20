@@ -1,10 +1,9 @@
 using System;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace InfluxDB.Extensions
 {
-    public static class StringExtensions
+    internal static class StringExtensions
     {
         private static readonly Regex UnquotedIdentifier = new Regex("[A-Za-z_][A-Za-z0-9_]*");
 
