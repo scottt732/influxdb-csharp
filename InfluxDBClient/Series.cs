@@ -3,11 +3,11 @@ using Newtonsoft.Json;
 
 namespace InfluxDB
 {
-    public class Serie
+    public class Series
     {
-        public Serie()
+        public Series()
         {
-            this.Points = new List<object[]>();
+            Points = new List<object[]>();
         }
 
         [JsonProperty(PropertyName = "name")]
