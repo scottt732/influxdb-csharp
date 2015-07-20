@@ -35,11 +35,17 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,17 +54,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EpochHelper.cs" />
+    <Compile Include="Enums\Consistency.cs" />
+    <Compile Include="Enums\Privilege.cs" />
+    <Compile Include="Extensions\HttpResponseMessageExtensions.cs" />
+    <Compile Include="Extensions\ResultExtensions.cs" />
+    <Compile Include="Extensions\ResultSetExtensions.cs" />
+    <Compile Include="Extensions\SeriesExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="InfluxException.cs" />
+    <Compile Include="IO\BaseRequestProcessor.cs" />
+    <Compile Include="IO\HttpClientRequestProcessor.cs" />
+    <Compile Include="IO\IRequestProcessor.cs" />
+    <Compile Include="IO\IRequestProcessorSettings.cs" />
+    <Compile Include="IO\RequestProcessorSettings.cs" />
+    <Compile Include="Queries.cs" />
+    <Compile Include="Retention.cs" />
+    <Compile Include="Response\Result.cs" />
+    <Compile Include="Response\ResultSet.cs" />
+    <Compile Include="Response\Series.cs" />
+    <Compile Include="RetentionPolicy.cs" />
+    <Compile Include="Timestamp\AdaptiveTimestampGenerator.cs" />
+    <Compile Include="Timestamp\DateTimeStopwatchTimestampGenerator.cs" />
+    <Compile Include="Timestamp\DateTimeTimestampGenerator.cs" />
+    <Compile Include="Timestamp\InfluxTimestampGenerator.cs" />
+    <Compile Include="Timestamp\ITimestampGenerator.cs" />
+    <Compile Include="Timestamp\SequentialTimestampGenerator.cs" />
+    <Compile Include="Timestamp\Source\DateTimeStopwatchTimestampSource.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Enums\Duration.cs" />
+    <Compile Include="Timestamp\Source\SystemTimePreciseTimestampSource.cs" />
     <Compile Include="IInfluxDBClient.cs" />
     <Compile Include="InfluxDBClient.cs" />
+    <Compile Include="InfluxKey.cs" />
+    <Compile Include="Request\WriteMessage.cs" />
     <Compile Include="InfluxServerInfo.cs" />
-    <Compile Include="Serie.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="Series.cs" />
+    <Compile Include="Enums\TimePrecision.cs" />
+    <Compile Include="Extensions\TimeSpanExtensions.cs" />
+    <Compile Include="Timestamp\SystemTimePreciseTimestampGenerator.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
