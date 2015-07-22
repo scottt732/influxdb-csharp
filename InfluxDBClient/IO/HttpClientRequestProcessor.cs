@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,6 +14,7 @@ using InfluxDB.Response;
 
 namespace InfluxDB.IO
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class HttpClientRequestProcessor : BaseRequestProcessor
     {
         private readonly HttpClient _client;
@@ -20,6 +22,16 @@ namespace InfluxDB.IO
         public HttpClientRequestProcessor(IRequestProcessorSettings settings) : base(settings)
         {
             _client = new HttpClient();
+        }
+
+        public HttpClientRequestProcessor(IRequestProcessorSettings settings, HttpMessageHandler httpMessageHandler) : base(settings)
+        {
+            _client = new HttpClient(httpMessageHandler);
+        }
+
+        public HttpClientRequestProcessor(IRequestProcessorSettings settings, HttpMessageHandler httpMessageHandler, bool disposeHandler) : base(settings)
+        {
+            _client = new HttpClient(httpMessageHandler, disposeHandler);
         }
 
         public override async Task<ResultSet> SendQuery(string database, string query, TimePrecision resultPrecision = TimePrecision.Microsecond, CancellationToken cancellationToken = default(CancellationToken))
